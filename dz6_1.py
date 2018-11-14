@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-import re
+from re import fullmatch
 input_reg = input('Enter expression, ex.: + 2 3: ')
 input_pattern = r'[+\-*/][ ]\d[ ]\d'
-match = re.fullmatch(input_pattern, input_reg)
+match = fullmatch(input_pattern, input_reg)
 if not match:
     print('enter expression with spaces like this: + 2 3')
 else:
